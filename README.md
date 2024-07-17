@@ -27,6 +27,8 @@ We confirmed that the evaluation of the models work with python3.8.
 ```
 python3.8 -m venv ern_venv
 source ./ern_venv/bin/activate
+git clone git@github.com:LeapMind/ERN.git
+cd ERN
 pip install pip==23.3.2 --upgrade # the installation of the wheel package may fail with version 24.0 and higher.
 pip install efficiera_residual_networks_library-1.0.0-py3-none-any.whl
 ```
