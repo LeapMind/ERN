@@ -1,0 +1,6 @@
+export_latest_nepochs_onnx:
+  _target_: efficiera.ndk.pth.experiments.base.src.callbacks.export_latest_nepochs_onnx.ExportLatestNEpochsOnnx
+  input_sizes: ${input_image_sizes}
+  dest: ${output_dir}/ckpt_onnx
+  name: ${name}
+  keep_n_epochs: ${keep_n_epochs}

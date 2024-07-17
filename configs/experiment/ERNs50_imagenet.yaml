@@ -1,0 +1,28 @@
+# @package _global_
+# @package _global_
+
+defaults:
+  - override /augmentor: imagenet_with_randaugment
+  - override /dataset: imagenet
+  - override /network: ERNs50_pretrain
+  - override /optimizer: sgd
+  - override /pl_module: classifier
+  - override /pre_processor: default
+  - override /scheduler: cosine
+
+name: ERNs50ImageNetPretrain
+input_image_sizes:
+  - [256, 256]
+
+training:
+  max_epochs: 100
+  batch_size: 128
+  lr: 0.1
+  weight_decay: 0.00001
+  batchnorm_kwargs:
+    momentum: 0.1
+    track_running_stats: True
+  use_mixup: False
+  use_cutmix: False
+  mixup_alpha: 1.0
+  cutmix_alpha: 1.0

@@ -1,0 +1,5 @@
+save_state_dict:
+  _target_: efficiera.ndk.pth.experiments.base.src.callbacks.save_state_dict.SaveStateDict
+  targets:
+    - network:model
+  dest: ${output_dir}/model

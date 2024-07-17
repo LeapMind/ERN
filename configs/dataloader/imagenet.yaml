@@ -1,0 +1,5 @@
+_target_: torch.utils.data.DataLoader
+batch_size: ${training.batch_size}
+num_workers: 80
+shuffle: True
+pin_memory: False

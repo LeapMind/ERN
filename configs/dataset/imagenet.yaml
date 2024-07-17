@@ -1,0 +1,6 @@
+_target_: torchvision.datasets.ImageFolder
+target:
+  _target_: ${dataset._target_}
+root: /storage/dataset/ILSVRC2012
+traindir: train
+valdir: val

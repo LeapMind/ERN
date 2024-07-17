@@ -1,0 +1,4 @@
+_target_: torchvision.datasets.FakeData
+size: 10
+image_size: [3, 32, 32]
+num_classes: 10

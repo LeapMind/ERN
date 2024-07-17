@@ -1,0 +1,19 @@
+# @package _global_
+
+augmentor:
+  - _target_: torchvision.transforms.Resize
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.RandomCrop
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.RandAugment
+    num_ops: 2
+    magnitude: 7
+
+pre_processor_val:
+  - _target_: torchvision.transforms.Resize
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.CenterCrop
+    size: ${input_image_sizes[0]}

@@ -1,0 +1,64 @@
+defaults:
+  - _self_
+  - augmentor: ???
+  - callbacks:
+    - export_onnx
+    - learming_rate_monitor
+    - log_complexity
+    - model_checkpoint
+    - save_code
+    - save_state_dict
+  - dataloader: default
+  - dataset: ???
+  - loggers:
+    - tensorboard
+  - network: ???
+  - optimizer: ???
+  - pl_module: ???
+  - pre_processor: ???
+  - pre_processor_val: null
+  - scheduler: ???
+  - trainer: default
+
+  - optional local: default
+
+  - debug: null
+
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+name: ???
+input_image_sizes: ???
+apply_pixel_embedding: ???
+save_model_path: null
+pretrained_model_path: null
+
+input_dir: ${output_dir}
+output_dir: .
+checkpoint_dir: checkpoints
+log_dir: logs
+gpus: 1
+amp: True # use automatic mixed precision
+
+verify_model_conversion: False
+plot_histogram: True
+
+quantize: True
+weight_quantizer: "BinaryChannelWiseMeanScaling"
+activation_quantizer: "HalfWaveGaussianQuantization"
+ewgs_delta: 0.0
+
+training:
+  max_epochs: ???
+  batch_size: ???
+  lr: ???
+  weight_decay: ???
+  bn_momentum: ???
+  use_mixup: ???
+  mixup_alpha: ???
+  use_cutmix: ???
+  cutmix_alpha: ???
+
+hydra:
+  run:
+    dir: .

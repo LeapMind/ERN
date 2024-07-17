@@ -1,0 +1,4 @@
+nan_stopping:
+  _target_: efficiera.ndk.pth.experiments.base.src.callbacks.nan_stopping.NaNStopping
+  verbose: True
+  log_rank_zero_only: False

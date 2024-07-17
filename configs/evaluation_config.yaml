@@ -1,0 +1,48 @@
+defaults:
+  - _self_
+  - augmentor: ???
+  - dataloader: default
+  - dataset: ???
+  - network: ???
+  - optimizer: ???
+  - pl_module: ???
+  - pre_processor: ???
+  - pre_processor_val: null
+  - scheduler: ???
+  - trainer: default
+
+  - optional local: default
+
+  - debug: null
+
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+name: ???
+input_image_sizes: ???
+apply_pixel_embedding: ???
+
+gpus: 1
+amp: True # use automatic mixed precision
+
+checkpoint_filepath: ???
+
+quantize: True
+weight_quantizer: "BinaryChannelWiseMeanScaling"
+activation_quantizer: "HalfWaveGaussianQuantization"
+ewgs_delta: 0.0
+
+training:
+  max_epochs: ???
+  batch_size: ???
+  lr: ???
+  weight_decay: ???
+  bn_momentum: ???
+  use_mixup: ???
+  mixup_alpha: ???
+  use_cutmix: ???
+  cutmix_alpha: ???
+
+hydra:
+  run:
+    dir: .

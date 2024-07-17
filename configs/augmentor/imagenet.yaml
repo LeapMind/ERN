@@ -1,0 +1,30 @@
+# @package _global_
+
+augmentor:
+  - _target_: torchvision.transforms.Resize
+    size: 256
+
+  - _target_: torchvision.transforms.RandomCrop
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.RandomHorizontalFlip
+    p: 0.5
+
+  - _target_: torchvision.transforms.ColorJitter
+    brightness: 0.25
+    contrast: 0.25
+    saturation: 0.25
+    hue: 0.5
+
+  - _target_: torchvision.transforms.RandomGrayscale
+    p: 0.3
+
+  - _target_: torchvision.transforms.RandomRotation
+    degrees: 15
+
+pre_processor_val:
+  - _target_: torchvision.transforms.Resize
+    size: 256
+
+  - _target_: torchvision.transforms.CenterCrop
+    size: ${input_image_sizes[0]}
