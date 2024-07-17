@@ -1,0 +1,4 @@
+- _target_: torchvision.transforms.ToTensor
+
+- _target_: efficiera.ndk.pth.utils.ToIntegerWithScaling
+  scale: 255.0

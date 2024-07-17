@@ -1,0 +1,25 @@
+_target_: efficiera.models.object_detection.training.pretrain.src.network.PretrainNetwork
+backbone:
+  _target_: efficiera.models.object_detection.training.network.backbone.resnet.ResNet
+  block:
+    _target_: hydra.utils.get_class
+    path: efficiera.models.object_detection.training.network.block.PreActBlock
+  layers: [2, 2, 2, 2]
+  initial_kernel_size: 3
+  use_secondary_layer: True
+  groups: 1
+  width_per_group: 64
+  quantize: ${quantize}
+  in_channels: 30
+  weight_quantizer: ${weight_quantizer}
+  activation_quantizer: ${activation_quantizer}
+  use_multiple_output: False
+  downsample_method: "conv"
+  bn_kwargs: ${training.batchnorm_kwargs}
+  ewgs_delta: ${ewgs_delta}
+  overrided_output_channels: ${network.backbone_output_channel}
+backbone_output_channel: 384
+num_classes: 1000
+quantize_last_conv: ${quantize}
+pev3_expansion: 10
+ewgs_delta: ${ewgs_delta}

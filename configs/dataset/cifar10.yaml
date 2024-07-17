@@ -1,0 +1,3 @@
+_target_: torchvision.datasets.CIFAR10
+root: ${hydra:runtime.cwd}/dataset/cifar10
+download: True

@@ -1,0 +1,13 @@
+neptune:
+  _target_: neptune.new.integrations.pytorch_lightning.NeptuneLogger
+  # Project name should be LeapMind/YOUR_PROJECT_NAME
+  project: ${project}
+  # Enter the name of the experiment. It is ok to duplicate other experiments.
+  name: ${name}
+  tags: ${tags}
+  log_model_checkpoints: False
+  custom_run_id:
+    _target_: efficiera.ndk.pth.experiments.base.src.loggers.make_neptune_custom_run_id.make_neptune_custom_run_id
+    input_custom_run_id_path: ${input_dir}/.neptune/custom_run_id
+    output_custom_run_id_path: ${output_dir}/.neptune/custom_run_id
+  api_token: null

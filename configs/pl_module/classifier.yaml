@@ -1,0 +1,10 @@
+_target_: efficiera.ndk.pth.experiments.classification.src.pl_modules.classifier.Classifier
+learning_rate: ${training.lr}
+optimizer_cfg: ${optimizer}
+scheduler_cfg: ${scheduler}
+use_mixup: ${training.use_mixup}
+mixup_alpha: ${training.mixup_alpha}
+use_cutmix: ${training.use_cutmix}
+cutmix_alpha: ${training.cutmix_alpha}
+tencrop_evaluation: false
+tencrop_size: 320

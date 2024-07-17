@@ -1,0 +1,18 @@
+# @package _global_
+
+augmentor:
+  - _target_: torchvision.transforms.Resize
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.RandomCrop
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.RandomHorizontalFlip
+    p: 0.5
+
+pre_processor_val:
+  - _target_: torchvision.transforms.Resize
+    size: ${input_image_sizes[0]}
+
+  - _target_: torchvision.transforms.CenterCrop
+    size: ${input_image_sizes[0]}

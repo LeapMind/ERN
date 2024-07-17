@@ -1,0 +1,3 @@
+_target_: efficiera.ndk.pth.lr_scheduler.CosineAnnealingWithWarmupLR
+T_max: ${training.max_epochs}
+T_warmup: ${training.warmup_epochs}

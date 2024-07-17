@@ -1,0 +1,29 @@
+# @package _global_
+
+defaults:
+  - override /augmentor: simple
+  - override /dataset: imagenet
+  - override /network: ERNs18_pretrain
+  - override /optimizer: adam
+  - override /pl_module: classifier
+  - override /pre_processor: default
+  - override /scheduler: cosine
+
+name: ERNs18ImageNetExp18
+input_image_sizes:
+  - [256, 256]
+
+training:
+  max_epochs: 400
+  batch_size: 512
+  lr: 1.6e-3
+  weight_decay: 0.00001
+  batchnorm_kwargs:
+    momentum: 0.1
+    track_running_stats: True
+  use_mixup: False
+  use_cutmix: False
+  mixup_alpha: 1.0
+  cutmix_alpha: 1.0
+
+ewgs_delta: 1e-2
