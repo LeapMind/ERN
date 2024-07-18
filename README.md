@@ -17,7 +17,7 @@ ImageNet accuracy of the pretrained models. Note that the accuracy may depend on
 
 ## Links
 - [Paper (TBA)]()
-- [Model Checkpoints](https://drive.google.com/drive/folders/1aCQA7QQlZRQTIlpYGENn42O-b5EX71Lv?usp=drive_link) 
+- [Model Checkpoints](https://drive.google.com/drive/folders/1aCQA7QQlZRQTIlpYGENn42O-b5EX71Lv?usp=drive_link)
 
 
 ## Setup
@@ -46,6 +46,14 @@ The model can be trained from scratch using `train.py`.
 ```
 python train.py +experiment=ERNs18x075_imagenet_best
 ```
+
+The experiment is managed by [hydra](https://hydra.cc/). The experiment settings are managed in `configs/experiment`.
+The best experiment settings for each models are as follows.
+- ERNs18x075: `configs/experiment/ERNs18x075_imagenet_best.yaml`
+- ERNs18: `configs/experiment/ERNs18_imagenet_best.yaml`
+- ERNs34: `configs/experiment/ERNs34_imagenet_best.yaml`
+- ERNs50: `configs/experiment/ERNs50_imagenet_best.yaml`
+- ERNs101: `configs/experiment/ERNs101_imagenet_best.yaml`
 
 ## Evaluation
 The trained model can be evaluated using `evaluate.py`
