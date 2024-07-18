@@ -21,8 +21,12 @@ ImageNet accuracy of the pretrained models. Note that the accuracy may depend on
 
 
 ## Setup
-We provide the library as a python wheel file.
-We confirmed that the evaluation of the models work with python3.8.
+We provide the library as a python wheel file (`efficiera_residual_networks_library-1.0.0-py3-none-any.whl`).
+We confirmed that the evaluation of the models work under the following conditions
+- python 3.8.0
+- NVIDIA DGX Server Version 4.7.0
+- NVIDIA-SMI 515.86.01
+- CUDA Version 11.7
 
 ```
 python3.8 -m venv ern_venv
