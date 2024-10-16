@@ -4,10 +4,6 @@
 This repository is the official implementation of Efficiera Residual Networks (ERNs).
 ERNs is a fully w1a2 image classification model including the input and output layer. ERNs achieves competitive performance compared to the state-of-the-art ultra-low-bit quantized models.
 
-## Ask for arxiv endorsement
-We need arxiv endorsement to upload our [paper](https://github.com/LeapMind/ERN/blob/main/ERNs_paper.pdf) to arxiv.
-If you have the rights to endorse and feel this work is ready to upload on arxiv, please endorse our work from [endorsement link](https://arxiv.org/auth/endorse?x=T3QFLP).
-
 ## Accuracy
 ImageNet accuracy of the pretrained models. Note that the accuracy may depend on the environment such as GPU architecture.
 
@@ -20,7 +16,7 @@ ImageNet accuracy of the pretrained models. Note that the accuracy may depend on
 |    ERNs101   | 5.6                 | 72.2 | 91.1 | 73.8 | 92.1 |
 
 ## Links
-- [Paper](https://github.com/LeapMind/ERN/blob/main/ERNs_paper.pdf)
+- [Paper](https://arxiv.org/abs/2410.11553)
 - [Model Checkpoints](https://drive.google.com/drive/folders/1aCQA7QQlZRQTIlpYGENn42O-b5EX71Lv?usp=drive_link)
 
 
